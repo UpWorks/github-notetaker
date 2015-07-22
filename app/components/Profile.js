@@ -28,7 +28,7 @@ var Profile = React.createClass({
           });
         }.bind(this));
     },
-    componentDidMount: function() {
+    componentDidMount: function(){
         this.ref = new Firebase('https://github-note-taker-mu.firebaseio.com');
         this.init();
     },
@@ -39,7 +39,7 @@ var Profile = React.createClass({
         this.unbind('notes');
         this.init();
     },
-    handleAddNote: function(newNote) {
+    handleAddNote: function(newNote){
       this.ref.child(this.getParams().username).set(this.state.notes.concat(newNote));
     },
     render: function(){
